@@ -7,7 +7,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Controllers\\": "src/controllers"
+            "Gluon\\": "src/gluon",
+            "App\\": "src/app"
         }
     }
 }
