@@ -5,7 +5,12 @@ use Symfony\Component\Routing\RouteCollection;
 
 $routes = new RouteCollection();
 
-$routes->add('hello', new Route('/hello/{name}', ['name' => 'World']));
-$routes->add('bye', new Route('/bye'));
+$routes->add('hello', new Route('/hello/{name}', [
+    'name' => 'World',
+    '_controller' => 'render_template'
+]));
+$routes->add('bye', new Route('/bye', [
+    '_controller' => 'render_template'
+]));
 
 return $routes;
